@@ -6,7 +6,9 @@
   <title>Hamza's Scoopery — Ice Cream &amp; Desserts</title>
   <link rel="icon" type="image/png" href="assets/logo.png" />
   <meta name="description" content="Handcrafted ice cream and desserts made fresh every day. Sweet scoops, always." />
+  <link rel="preload" as="image" href="assets/images/hero-cones.webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600&family=Kaushan+Script&family=Lilita+One&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
@@ -78,7 +80,7 @@
         <div class="hero-blob" aria-hidden="true"></div>
 
         <div class="hero-photo">
-          <img src="assets/images/hero-cones.webp"
+          <img src="assets/images/hero-cones.webp" width="1000" height="1000" fetchpriority="high" decoding="async"
                alt="Three ice cream cones" onerror="this.parentElement.classList.add('img-failed')" />
           <div class="fb hero-fb"><span>🍦</span><span>🍓</span><span>🍨</span><span>🫐</span></div>
         </div>
@@ -123,7 +125,7 @@
               Our Delicious
               <span class="creations-title-line">
                 <span class="creations-title-highlight">Creations</span>
-                <img src="assets/images/cherry.png" alt="" class="creations-cherry" width="56" height="56" aria-hidden="true">
+                <img src="assets/images/cherry.webp" loading="lazy" alt="" class="creations-cherry" width="56" height="56" aria-hidden="true">
               </span>
             </h2>
             <div class="creations-tags">
@@ -154,7 +156,7 @@
             <div class="flavor-card-inner">
               <span class="flavor-num">01</span>
               <div class="flavor-visual flavor-visual-cotton">
-                <img src="assets/images/ice-cream-1.png" alt="Cotton Candy Swirl ice cream" class="flavor-img">
+                <img src="assets/images/ice-cream-1.webp" width="186" height="360" loading="lazy" decoding="async" alt="Cotton Candy Swirl ice cream" class="flavor-img">
               </div>
               <span class="flavor-chip">Colorful</span>
               <h3 class="flavor-name">Cotton Candy Swirl</h3>
@@ -166,7 +168,7 @@
             <div class="flavor-card-inner">
               <span class="flavor-num">02</span>
               <div class="flavor-visual flavor-visual-cookies">
-                <img src="assets/images/ice-cream-2.png" alt="Cookies and Cream ice cream" class="flavor-img">
+                <img src="assets/images/ice-cream-2.webp" width="196" height="360" loading="lazy" decoding="async" alt="Cookies and Cream ice cream" class="flavor-img">
               </div>
               <span class="flavor-chip">Classic</span>
               <h3 class="flavor-name">Cookies &amp; Cream</h3>
@@ -177,7 +179,7 @@
             <div class="flavor-card-inner">
               <span class="flavor-num">03</span>
               <div class="flavor-visual flavor-visual-sprinkle">
-                <img src="assets/images/ice-cream-3.png" alt="Rainbow Sprinkles ice cream" class="flavor-img">
+                <img src="assets/images/ice-cream-3.webp" width="270" height="360" loading="lazy" decoding="async" alt="Rainbow Sprinkles ice cream" class="flavor-img">
               </div>
               <span class="flavor-chip">Fun &amp; Bright</span>
               <h3 class="flavor-name">Rainbow Sprinkles</h3>
@@ -188,7 +190,7 @@
             <div class="flavor-card-inner">
               <span class="flavor-num">04</span>
               <div class="flavor-visual flavor-visual-lavender">
-                <img src="assets/images/ice-cream-4.png" alt="Lavender Blossom ice cream" class="flavor-img">
+                <img src="assets/images/ice-cream-4.webp" width="225" height="360" loading="lazy" decoding="async" alt="Lavender Blossom ice cream" class="flavor-img">
               </div>
               <span class="flavor-chip">Floral</span>
               <h3 class="flavor-name">Lavender Blossom</h3>
@@ -199,7 +201,7 @@
             <div class="flavor-card-inner">
               <span class="flavor-num">05</span>
               <div class="flavor-visual flavor-visual-pistachio">
-                <img src="assets/images/ice-cream-5.png" alt="Pistachio Bliss ice cream" class="flavor-img">
+                <img src="assets/images/ice-cream-5.webp" width="199" height="360" loading="lazy" decoding="async" alt="Pistachio Bliss ice cream" class="flavor-img">
               </div>
               <span class="flavor-chip">Nutty Fresh</span>
               <h3 class="flavor-name">Pistachio Bliss</h3>
@@ -210,7 +212,7 @@
             <div class="flavor-card-inner">
               <span class="flavor-num">06</span>
               <div class="flavor-visual flavor-visual-berry">
-                <img src="assets/images/ice-cream-6.png" alt="Berry Waffle Crunch ice cream" class="flavor-img">
+                <img src="assets/images/ice-cream-6.webp" width="480" height="630" loading="lazy" decoding="async" alt="Berry Waffle Crunch ice cream" class="flavor-img">
               </div>
               <span class="flavor-chip">Loaded</span>
               <h3 class="flavor-name">Berry Waffle Crunch</h3>
@@ -254,7 +256,7 @@
             </a>
           </div>
           <div class="promo-banner-visual" aria-hidden="true">
-            <img src="assets/images/hero-cutout-1.png" alt="" class="promo-hero-img">
+            <img src="assets/images/hero-cutout-1.webp" width="800" height="1200" loading="lazy" decoding="async" alt="" class="promo-hero-img">
           </div>
         </article>
 
@@ -265,7 +267,7 @@
           </header>
           <ul class="picks-list">
             <li class="picks-item">
-              <img src="assets/images/triple-scope.png" alt="" class="picks-item-thumb" width="52" height="52">
+              <img src="assets/images/triple-scope-thumb.webp" loading="lazy" alt="" class="picks-item-thumb" width="52" height="52">
               <div class="picks-item-info">
                 <h4 class="picks-item-name">Triple Scoop Cone</h4>
                 <p class="picks-item-meta">Vanilla · Berry · Caramel</p>
@@ -273,7 +275,7 @@
               <span class="picks-item-price">$5.50</span>
             </li>
             <li class="picks-item">
-              <img src="assets/images/classic-scope.png" alt="" class="picks-item-thumb" width="52" height="52">
+              <img src="assets/images/classic-scope-thumb.webp" loading="lazy" alt="" class="picks-item-thumb" width="52" height="52">
               <div class="picks-item-info">
                 <h4 class="picks-item-name">Classic Sundae</h4>
                 <p class="picks-item-meta">Warm fudge &amp; cherry top</p>
@@ -356,10 +358,10 @@
               <span class="story-btn-arrow"><i class="bi bi-arrow-right"></i></span>
             </a>
           </div>
-          <img src="assets/images/ice-cream-6.png" alt="" class="story-decor-img" aria-hidden="true">
+          <img src="assets/images/ice-cream-6.webp" width="480" height="630" loading="lazy" decoding="async" alt="" class="story-decor-img" aria-hidden="true">
         </div>
         <div class="story-visual">
-          <img src="assets/images/story-team.png" alt="The Hamza's Scoopery team smiling with ice cream cones" class="story-img" loading="lazy">
+          <img src="assets/images/story-team.webp" width="1200" height="800" decoding="async" alt="The Hamza's Scoopery team smiling with ice cream cones" class="story-img" loading="lazy">
         </div>
       </div>
     </div>
@@ -460,19 +462,19 @@
 
         <div class="gallery-grid">
           <figure class="gallery-item">
-            <img src="assets/images/kids-park.png" alt="Happy kids at park" class="gallery-img" loading="lazy" width="260" height="325">
+            <img src="assets/images/kids-park.webp" alt="Happy kids at park" class="gallery-img" loading="lazy" width="260" height="325">
           </figure>
           <figure class="gallery-item">
-            <img src="assets/images/family-home.png" alt="Happy family at home" class="gallery-img" loading="lazy" width="260" height="325">
+            <img src="assets/images/family-home.webp" alt="Happy family at home" class="gallery-img" loading="lazy" width="260" height="325">
           </figure>
           <figure class="gallery-item">
-            <img src="assets/images/friends.jpeg" alt="Friends" class="gallery-img" loading="lazy" width="260" height="325">
+            <img src="assets/images/friends.webp" alt="Friends" class="gallery-img" loading="lazy" width="260" height="325">
           </figure>
           <figure class="gallery-item">
-            <img src="assets/images/couple.jpeg" alt="Couple" class="gallery-img" loading="lazy" width="260" height="325">
+            <img src="assets/images/couple.webp" alt="Couple" class="gallery-img" loading="lazy" width="260" height="325">
           </figure>
           <figure class="gallery-item">
-            <img src="assets/images/happy-women.jpeg" alt="Happy women" class="gallery-img" loading="lazy" width="260" height="325">
+            <img src="assets/images/happy-women.webp" alt="Happy women" class="gallery-img" loading="lazy" width="260" height="325">
           </figure>
         </div>
       </div>
@@ -506,11 +508,11 @@
           <small class="news-note" id="newsNote" hidden>Thanks! You're on the sweet list. 🍦</small>
         </div>
         <div class="newsletter-visual" aria-hidden="true">
-          <img src="assets/images/strawberry-cup.png" alt=""
+          <img src="assets/images/strawberry-cup.webp" width="400" height="286" alt=""
                class="newsletter-img newsletter-img--side newsletter-img--left" loading="lazy">
-          <img src="assets/images/triple-scope.png" alt=""
+          <img src="assets/images/triple-scope.webp" width="640" height="640" alt=""
                class="newsletter-img newsletter-img--main" loading="lazy">
-          <img src="assets/images/strawberry-cup.png" alt=""
+          <img src="assets/images/strawberry-cup.webp" width="400" height="286" alt=""
                class="newsletter-img newsletter-img--side newsletter-img--right" loading="lazy">
         </div>
       </div>
