@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamza's Scoopery — Ice Cream &amp; Desserts</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <meta name="description" content="Handcrafted ice cream and desserts made fresh every day. Sweet scoops, always." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600&family=Kaushan+Script&family=Lilita+One&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="logo" data-nav="home">
+        <span class="logo-mark">🧁</span>
+        <span class="logo-text">
+          <span class="logo-top">Hamza's</span>
+          <span class="logo-bottom">Scoopery</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <a href="#home" class="nav-link active" data-nav="home">Home<span class="squiggle"></span></a>
+        <a href="#flavors" class="nav-link" data-nav="flavors">Flavors<span class="squiggle"></span></a>
+        <a href="#deals" class="nav-link" data-nav="deals">Deals<span class="squiggle"></span></a>
+        <a href="#story" class="nav-link" data-nav="story">Our Story<span class="squiggle"></span></a>
+        <a href="#gallery" class="nav-link" data-nav="gallery">Gallery<span class="squiggle"></span></a>
+        <a href="#contact" class="nav-link" data-nav="contact">Contact<span class="squiggle"></span></a>
+
+        <div class="nav-menu-actions">
+          <div class="nav-icon-group-m">
+            <button class="icon-btn" aria-label="Search"><i class="bi bi-search"></i></button>
+            <button class="icon-btn" aria-label="Cart"><i class="bi bi-bag"></i><span class="cart-badge"></span></button>
+          </div>
+          <a href="#contact" class="btn-pink" data-nav="contact">Order Now <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" aria-label="Cart">
+          <i class="bi bi-bag"></i>
+          <span class="cart-badge"></span>
+        </button>
+        <a href="#contact" class="btn-pink" data-nav="contact">Order Now <i class="bi bi-arrow-right"></i></a>
+        <button class="burger" id="burgerBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1 class="hero-title">
+          <span class="line line-1"><span class="line-in">SWEET.</span></span>
+          <span class="line line-2"><span class="line-in">SCOOPS.</span></span>
+          <span class="line line-3"><span class="line-in">ALWAYS!</span></span>
+        </h1>
+        <p class="hero-sub">
+          From classic favorites to exciting new flavors,<br />
+          every scoop is crafted fresh to make you smile.
+        </p>
+        <div class="hero-cta">
+          <a href="#flavors" class="hero-cta-btn" data-nav="flavors">
+            Explore Flavors
+            <span class="circ"><i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="hero-deco" aria-hidden="true">
+          <div class="hero-spotlight"></div>
+          <div class="hero-ring ring-1"></div>
+          <div class="hero-ring ring-2"></div>
+          <span class="hero-accent accent-pink"></span>
+          <span class="hero-accent accent-mint"></span>
+        </div>
+
+        <div class="hero-blob" aria-hidden="true"></div>
+
+        <div class="hero-photo">
+          <img src="hero-cones.webp"
+               alt="Three ice cream cones" onerror="this.parentElement.classList.add('img-failed')" />
+          <div class="fb hero-fb"><span>🍦</span><span>🍓</span><span>🍨</span><span>🫐</span></div>
+        </div>
+
+        <div class="rating-card">
+          <div class="rating-star"><i class="bi bi-star-fill"></i></div>
+          <div class="rating-body">
+            <div class="rating-head">
+              <span class="rating-score">4.8</span>
+              <span class="rating-out">/ 5</span>
+            </div>
+            <div class="rating-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <div class="rating-loved">Loved by locals</div>
+            <div class="rating-est">Est. 2024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- wave divider (hero → creations) -->
+  <div class="wave-band">
+    <svg viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true">
+      <path class="wave-fill"
+            d="M0,58 C90,82 150,38 250,50 C355,63 420,92 540,60 C650,30 735,45 820,68 C930,96 1005,35 1115,48 C1240,63 1320,88 1440,55 V96 H0 Z"></path>
+      <path class="wave-outline"
+            d="M0,58 C90,82 150,38 250,50 C355,63 420,92 540,60 C650,30 735,45 820,68 C930,96 1005,35 1115,48 C1240,63 1320,88 1440,55"></path>
+      <path class="wave-line"
+            d="M0,58 C90,82 150,38 250,50 C355,63 420,92 540,60 C650,30 735,45 820,68 C930,96 1005,35 1115,48 C1240,63 1320,88 1440,55"></path>
+    </svg>
+  </div>
+
+  <!-- ================= CREATIONS / FLAVORS ================= -->
+  <section class="creations" id="flavors">
+    <div class="container">
+      <div class="creations-top">
+        <div class="creations-header">
+          <div class="creations-header-main">
+            <span class="creations-eyebrow">Fan Favorites</span>
+            <h2 class="creations-title">
+              Our Delicious
+              <span class="creations-title-line">
+                <span class="creations-title-highlight">Creations</span>
+                <img src="assets/images/cherry.png" alt="" class="creations-cherry" width="56" height="56" aria-hidden="true">
+              </span>
+            </h2>
+            <div class="creations-tags">
+              <span class="tag-coral">Fresh Daily</span>
+              <span class="tag-mint">Handcrafted</span>
+              <span class="tag-gold">Small Batch</span>
+            </div>
+          </div>
+          <aside class="creations-aside-card">
+            <span class="creations-aside-icon" aria-hidden="true"><i class="bi bi-quote"></i></span>
+            <p class="creations-desc">
+              Since our first scoop came out of the freezer, we've been dedicated
+              to bringing you fresh, wholesome, and delicious treats every day.
+            </p>
+            <a href="#deals" class="creations-aside-link" data-nav="deals">
+              Explore deals
+              <span class="creations-aside-link-arrow"><i class="bi bi-arrow-right"></i></span>
+            </a>
+          </aside>
+        </div>
+      </div>
+
+      <div class="flavors-showcase">
+        <button class="flavor-nav flavor-nav-prev" aria-label="Previous flavors"><i class="bi bi-chevron-left"></i></button>
+
+        <div class="flavors-track">
+          <article class="flavor-card flavor-card-cotton">
+            <div class="flavor-card-inner">
+              <span class="flavor-num">01</span>
+              <div class="flavor-visual flavor-visual-cotton">
+                <img src="assets/images/ice-cream-1.png" alt="Cotton Candy Swirl ice cream" class="flavor-img">
+              </div>
+              <span class="flavor-chip">Colorful</span>
+              <h3 class="flavor-name">Cotton Candy Swirl</h3>
+            </div>
+          </article>
+
+          <article class="flavor-card flavor-card-cookies flavor-card--featured">
+            <span class="flavor-popular">Most Loved</span>
+            <div class="flavor-card-inner">
+              <span class="flavor-num">02</span>
+              <div class="flavor-visual flavor-visual-cookies">
+                <img src="assets/images/ice-cream-2.png" alt="Cookies and Cream ice cream" class="flavor-img">
+              </div>
+              <span class="flavor-chip">Classic</span>
+              <h3 class="flavor-name">Cookies &amp; Cream</h3>
+            </div>
+          </article>
+
+          <article class="flavor-card flavor-card-sprinkle">
+            <div class="flavor-card-inner">
+              <span class="flavor-num">03</span>
+              <div class="flavor-visual flavor-visual-sprinkle">
+                <img src="assets/images/ice-cream-3.png" alt="Rainbow Sprinkles ice cream" class="flavor-img">
+              </div>
+              <span class="flavor-chip">Fun &amp; Bright</span>
+              <h3 class="flavor-name">Rainbow Sprinkles</h3>
+            </div>
+          </article>
+
+          <article class="flavor-card flavor-card-lavender">
+            <div class="flavor-card-inner">
+              <span class="flavor-num">04</span>
+              <div class="flavor-visual flavor-visual-lavender">
+                <img src="assets/images/ice-cream-4.png" alt="Lavender Blossom ice cream" class="flavor-img">
+              </div>
+              <span class="flavor-chip">Floral</span>
+              <h3 class="flavor-name">Lavender Blossom</h3>
+            </div>
+          </article>
+
+          <article class="flavor-card flavor-card-pistachio">
+            <div class="flavor-card-inner">
+              <span class="flavor-num">05</span>
+              <div class="flavor-visual flavor-visual-pistachio">
+                <img src="assets/images/ice-cream-5.png" alt="Pistachio Bliss ice cream" class="flavor-img">
+              </div>
+              <span class="flavor-chip">Nutty Fresh</span>
+              <h3 class="flavor-name">Pistachio Bliss</h3>
+            </div>
+          </article>
+
+          <article class="flavor-card flavor-card-berry">
+            <div class="flavor-card-inner">
+              <span class="flavor-num">06</span>
+              <div class="flavor-visual flavor-visual-berry">
+                <img src="assets/images/ice-cream-6.png" alt="Berry Waffle Crunch ice cream" class="flavor-img">
+              </div>
+              <span class="flavor-chip">Loaded</span>
+              <h3 class="flavor-name">Berry Waffle Crunch</h3>
+            </div>
+          </article>
+        </div>
+
+        <button class="flavor-nav flavor-nav-next" aria-label="Next flavors"><i class="bi bi-chevron-right"></i></button>
+      </div>
+
+      <div class="creations-footer">
+        <a href="#deals" class="btn creations-menu-btn rounded-pill" data-nav="deals">
+          Explore Deals
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HIGHLIGHTS / DEALS ================= -->
+  <section class="promo-deals" id="deals">
+    <div class="container">
+      <div class="promo-deals-grid">
+        <article class="promo-banner">
+          <div class="promo-banner-bg" aria-hidden="true">
+            <span class="promo-blob promo-blob-1"></span>
+            <span class="promo-blob promo-blob-2"></span>
+          </div>
+          <div class="promo-banner-content">
+            <span class="promo-eyebrow">Small Batch Kitchen</span>
+            <h2 class="promo-banner-title">
+              Handcrafted
+              <span class="promo-title-accent">Scoops Daily</span>
+            </h2>
+            <p class="promo-banner-desc">
+              Real ingredients, slow-churned batches, and flavors that rotate with the seasons — made right here, never shipped in.
+            </p>
+            <a href="#flavors" class="btn promo-order-btn rounded-pill" data-nav="flavors">
+              Browse Flavors
+              <span class="promo-order-arrow"><i class="bi bi-arrow-right"></i></span>
+            </a>
+          </div>
+          <div class="promo-banner-visual" aria-hidden="true">
+            <img src="assets/images/hero-cutout-1.png" alt="" class="promo-hero-img">
+          </div>
+        </article>
+
+        <aside class="picks-card">
+          <header class="picks-card-header">
+            <span class="picks-eyebrow"><i class="bi bi-stars"></i> Trending Now</span>
+            <h3 class="picks-title">Customer Favorites</h3>
+          </header>
+          <ul class="picks-list">
+            <li class="picks-item">
+              <img src="assets/images/triple-scope.png" alt="" class="picks-item-thumb" width="52" height="52">
+              <div class="picks-item-info">
+                <h4 class="picks-item-name">Triple Scoop Cone</h4>
+                <p class="picks-item-meta">Vanilla · Berry · Caramel</p>
+              </div>
+              <span class="picks-item-price">$5.50</span>
+            </li>
+            <li class="picks-item">
+              <img src="assets/images/classic-scope.png" alt="" class="picks-item-thumb" width="52" height="52">
+              <div class="picks-item-info">
+                <h4 class="picks-item-name">Classic Sundae</h4>
+                <p class="picks-item-meta">Warm fudge &amp; cherry top</p>
+              </div>
+              <span class="picks-item-price">$6.99</span>
+            </li>
+          </ul>
+          <a href="#flavors" class="picks-view-btn" data-nav="flavors">
+            Explore Full Menu
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-grid">
+        <article class="feature-item">
+          <div class="feature-card">
+            <span class="feature-icon feature-icon--green" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M1.4 1.7c.216.289.65.84 1.725 1.274 1.093.44 2.884.774 5.834.528l.37-.023c1.823-.06 3.117.598 3.956 1.579C14.16 6.082 14.5 7.41 14.5 8.5c0 .58-.032 1.285-.229 1.997q.198.248.382.54c.756 1.2 1.19 2.563 1.348 3.966a1 1 0 0 1-1.98.198c-.13-.97-.397-1.913-.868-2.77C12.173 13.386 10.565 14 8 14c-1.854 0-3.32-.544-4.45-1.435-1.125-.887-1.89-2.095-2.391-3.383C.16 6.62.16 3.646.509 1.902L.73.806zm-.05 1.39c-.146 1.609-.008 3.809.74 5.728.457 1.17 1.13 2.213 2.079 2.961.942.744 2.185 1.22 3.83 1.221 2.588 0 3.91-.66 4.609-1.445-1.789-2.46-4.121-1.213-6.342-2.68-.74-.488-1.735-1.323-1.844-2.308-.023-.214.237-.274.38-.112 1.4 1.6 3.573 1.757 5.59 2.045 1.227.215 2.21.526 3.033 1.158.058-.39.075-.782.075-1.158 0-.91-.288-1.988-.975-2.792-.626-.732-1.622-1.281-3.167-1.229l-.316.02c-3.05.253-5.01-.08-6.291-.598a5.3 5.3 0 0 1-1.4-.811"/>
+              </svg>
+            </span>
+            <h3 class="feature-title">Natural Ingredients</h3>
+            <p class="feature-desc">Made with real fruits, nuts &amp; dairy.</p>
+          </div>
+        </article>
+        <article class="feature-item">
+          <div class="feature-card">
+            <span class="feature-icon feature-icon--brown" aria-hidden="true"><i class="bi bi-cup-hot"></i></span>
+            <h3 class="feature-title">Handcrafted</h3>
+            <p class="feature-desc">Small batch ice cream with love.</p>
+          </div>
+        </article>
+        <article class="feature-item">
+          <div class="feature-card">
+            <span class="feature-icon feature-icon--blue" aria-hidden="true"><i class="bi bi-truck"></i></span>
+            <h3 class="feature-title">Fast Delivery</h3>
+            <p class="feature-desc">Quick &amp; cold delivery to your door.</p>
+          </div>
+        </article>
+        <article class="feature-item">
+          <div class="feature-card">
+            <span class="feature-icon feature-icon--yellow" aria-hidden="true"><i class="bi bi-recycle"></i></span>
+            <h3 class="feature-title">Eco Friendly</h3>
+            <p class="feature-desc">Sustainable packaging for a better planet.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OUR STORY ================= -->
+  <section class="our-story" id="story">
+    <div class="container">
+      <div class="story-card">
+        <div class="story-content">
+          <div class="story-content-bg" aria-hidden="true"></div>
+          <div class="story-content-inner">
+            <span class="story-badge"><i class="bi bi-heart-fill"></i> Since 2024</span>
+            <span class="story-script">Our Story</span>
+            <h2 class="story-title">
+              Crafted with Passion,
+              <span class="story-title-accent">Served with Love</span>
+            </h2>
+            <p class="story-desc">
+              What started as a small kitchen experiment is now your favorite ice cream destination — still small-batch, still made fresh, and still scooped with a smile every day.
+            </p>
+            <ul class="story-tags">
+              <li>Small Batch</li>
+              <li>Fresh Daily</li>
+              <li>Local Favorite</li>
+            </ul>
+            <a href="#contact" class="btn story-btn rounded-pill" data-nav="contact">
+              Read Our Story
+              <span class="story-btn-arrow"><i class="bi bi-arrow-right"></i></span>
+            </a>
+          </div>
+          <img src="assets/images/ice-cream-6.png" alt="" class="story-decor-img" aria-hidden="true">
+        </div>
+        <div class="story-visual">
+          <img src="assets/images/story-team.png" alt="The Hamza's Scoopery team smiling with ice cream cones" class="story-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REVIEWS ================= -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <header class="reviews-header">
+        <span class="reviews-script">Customer Favorites</span>
+        <h2 class="reviews-title">Loved by Thousands</h2>
+      </header>
+
+      <div class="reviews-showcase">
+        <button class="review-nav review-nav-prev" type="button" aria-label="Previous reviews"><i class="bi bi-chevron-left"></i></button>
+
+        <div class="reviews-track">
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-user">
+                <img src="assets/images/avatar-1.jpg" alt="" class="review-avatar" width="48" height="48" loading="lazy">
+                <cite class="review-author">Emily R.</cite>
+              </div>
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <blockquote class="review-text">&ldquo;The best ice cream I&rsquo;ve ever had!&rdquo;</blockquote>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-user">
+                <img src="assets/images/avatar-2.jpg" alt="" class="review-avatar" width="48" height="48" loading="lazy">
+                <cite class="review-author">James T.</cite>
+              </div>
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <blockquote class="review-text">&ldquo;Absolutely delicious!&rdquo;</blockquote>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-user">
+                <img src="assets/images/avatar-3.jpg" alt="" class="review-avatar" width="48" height="48" loading="lazy">
+                <cite class="review-author">Sarah M.</cite>
+              </div>
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <blockquote class="review-text">&ldquo;Fresh, creamy &amp; simply perfect!&rdquo;</blockquote>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-user">
+                <img src="assets/images/avatar-4.jpg" alt="" class="review-avatar" width="48" height="48" loading="lazy">
+                <cite class="review-author">Aisha K.</cite>
+              </div>
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <blockquote class="review-text">&ldquo;My kids ask for Scoopery every weekend!&rdquo;</blockquote>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="review-user">
+                <img src="assets/images/avatar-5.jpg" alt="" class="review-avatar" width="48" height="48" loading="lazy">
+                <cite class="review-author">Daniel P.</cite>
+              </div>
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <blockquote class="review-text">&ldquo;Real flavors, not too sweet — love it!&rdquo;</blockquote>
+          </article>
+        </div>
+
+        <button class="review-nav review-nav-next" type="button" aria-label="Next reviews"><i class="bi bi-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="gallery-panel">
+        <header class="gallery-header">
+          <span class="gallery-script">Sweet Moments</span>
+          <h2 class="gallery-title">Shared With Our Community</h2>
+          <p class="gallery-sub">Tag us <span class="gallery-tag">@hamzas_scoopery</span> to get featured!</p>
+        </header>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="assets/images/kids-park.png" alt="Happy kids at park" class="gallery-img" loading="lazy" width="260" height="325">
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/family-home.png" alt="Happy family at home" class="gallery-img" loading="lazy" width="260" height="325">
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/friends.jpeg" alt="Friends" class="gallery-img" loading="lazy" width="260" height="325">
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/couple.jpeg" alt="Couple" class="gallery-img" loading="lazy" width="260" height="325">
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/images/happy-women.jpeg" alt="Happy women" class="gallery-img" loading="lazy" width="260" height="325">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEWSLETTER / CONTACT ================= -->
+  <section class="newsletter" id="contact">
+    <div class="container">
+      <div class="newsletter-grid">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">Stay Sweet with Scoopery!</h2>
+          <p class="newsletter-desc">Get updates on new flavors, special offers &amp; sweet surprises.</p>
+          <form class="newsletter-form" action="#" method="post" id="newsForm">
+            <label class="visually-hidden" for="newsEmail">Email address</label>
+            <div class="newsletter-field">
+              <i class="bi bi-envelope newsletter-field-icon" aria-hidden="true"></i>
+              <input type="email" id="newsEmail" name="email" placeholder="Enter your email" required autocomplete="email">
+              <button type="submit" class="newsletter-btn" id="newsBtn">Subscribe</button>
+            </div>
+          </form>
+          <small class="news-note" id="newsNote" hidden>Thanks! You're on the sweet list. 🍦</small>
+        </div>
+        <div class="newsletter-visual" aria-hidden="true">
+          <img src="assets/images/strawberry-cup.png" alt=""
+               class="newsletter-img newsletter-img--side newsletter-img--left" loading="lazy">
+          <img src="assets/images/triple-scope.png" alt=""
+               class="newsletter-img newsletter-img--main" loading="lazy">
+          <img src="assets/images/strawberry-cup.png" alt=""
+               class="newsletter-img newsletter-img--side newsletter-img--right" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo-link" data-nav="home">
+            <span class="logo">
+              <span class="logo-mark">🧁</span>
+              <span class="logo-text">
+                <span class="logo-top">Hamza's</span>
+                <span class="logo-bottom">Scoopery</span>
+              </span>
+            </span>
+          </a>
+          <p class="footer-tagline">Creating sweet moments, one scoop at a time.</p>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Sargodha, Pakistan</li>
+            <li><i class="bi bi-envelope-fill" aria-hidden="true"></i> hamzamumtaz0600@gmail.com</li>
+            <li><i class="bi bi-telephone-fill" aria-hidden="true"></i> +923096717017</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#story" data-nav="story">Our Story</a></li>
+            <li><a href="#flavors" data-nav="flavors">Flavors</a></li>
+            <li><a href="#deals" data-nav="deals">Deals</a></li>
+            <li><a href="#reviews" data-nav="reviews">Reviews</a></li>
+            <li><a href="#gallery" data-nav="gallery">Gallery</a></li>
+            <li><a href="#contact" data-nav="contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Help &amp; Support</h3>
+          <ul class="footer-links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-social">
+          <h3 class="footer-heading">Follow Us</h3>
+          <p class="footer-social-text">Join our sweet community for scoops, drops &amp; deals.</p>
+          <div class="footer-social">
+            <a class="footer-social-link footer-social-link--mint" aria-label="Facebook" role="link" tabindex="0"><i class="bi bi-facebook"></i></a>
+            <a class="footer-social-link footer-social-link--coral" aria-label="Instagram" role="link" tabindex="0"><i class="bi bi-instagram"></i></a>
+            <a class="footer-social-link footer-social-link--sky" aria-label="Twitter" role="link" tabindex="0"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true">
+        <path fill="#17A398" d="M0,28 C180,52 360,8 540,26 C720,44 900,10 1080,26 C1260,42 1350,34 1440,28 L1440,64 L0,64 Z"/>
+      </svg>
+      <div class="footer-bottom-bar">
+        <div class="container">
+          <p class="footer-copy">
+            &copy; 2026 Hamza&rsquo;s Scoopery &mdash; All rights reserved.
+            <span class="footer-copy-separator">|</span>
+            Developed by
+            <a href="#">Hamza Ali</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- back to top -->
+  <button type="button" class="to-top" id="toTop" aria-label="Scroll back to top">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
