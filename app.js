@@ -278,8 +278,10 @@
           success(true);
         })
         .catch(function () {
-          /* fallback: normal submit — email phir bhi Netlify ko jayegi */
-          form.submit();
+          /* fail soft: user ko 404 page par mat bhejo — yahin Try again dikhao */
+          btn.textContent = 'Try again!';
+          email.focus();
+          setTimeout(function () { btn.textContent = 'Subscribe'; }, 4000);
         });
     });
   }
