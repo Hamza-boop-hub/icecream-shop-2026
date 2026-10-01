@@ -201,7 +201,7 @@ section{scroll-margin-top:var(--nav-h)}
 
 .hero-title{
   font-family:'Lilita One',cursive;font-weight:400;line-height:.92;
-  margin-bottom:28px;letter-spacing:.02em;font-size:40px;
+  margin-bottom:28px;letter-spacing:.02em;font-size:40px;cursor:pointer;
 }
 .hero-title .line{display:block;font-size:clamp(3.2rem,7.5vw,5.8rem);text-transform:uppercase;margin-bottom:.05em}
 .hero-title .line-in{display:inline-block;position:relative}
