@@ -227,7 +227,7 @@
     });
   }
 
-  /* ---------- newsletter form ---------- */
+  /* ---------- newsletter form (Netlify Forms) ---------- */
   var form = $('#newsForm');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -236,13 +236,51 @@
       var btn = $('#newsBtn');
       var note = $('#newsNote');
       if (!email || !email.value.trim()) return;
-      btn.textContent = 'Subscribed!';
-      note.hidden = false;
-      email.value = '';
-      setTimeout(function () {
-        btn.textContent = 'Subscribe';
-        note.hidden = true;
-      }, 4000);
+      var val = email.value.trim().toLowerCase();
+      var host = location.hostname || 'file';
+      var KEY = 'hs_news_sub_' + host;
+
+      /* duplicate email dobara submit na ho */
+      try {
+        if (localStorage.getItem(KEY) === val) {
+          btn.textContent = 'Already subscribed!';
+          setTimeout(function () { btn.textContent = 'Subscribe'; }, 4000);
+          return;
+        }
+      } catch (err) {}
+
+      function success(store) {
+        btn.textContent = 'Subscribed!';
+        note.hidden = false;
+        email.value = '';
+        if (store) { try { localStorage.setItem(KEY, val); } catch (err) {} }
+        setTimeout(function () {
+          btn.textContent = 'Subscribe';
+          note.hidden = true;
+        }, 4000);
+      }
+
+      /* localhost/file preview: sirf UI dikhao (Netlify live site pe kaam karega) */
+      if (location.protocol === 'file:' || host === 'localhost' || host === '127.0.0.1') {
+        success(true);
+        return;
+      }
+
+      /* Netlify ko AJAX POST (page reload nahi) */
+      var body = new URLSearchParams(new FormData(form)).toString();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('bad response');
+          success(true);
+        })
+        .catch(function () {
+          /* fallback: normal submit — email phir bhi Netlify ko jayegi */
+          form.submit();
+        });
     });
   }
 

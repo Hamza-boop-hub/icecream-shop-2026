@@ -34,20 +34,11 @@
         <a href="#contact" class="nav-link" data-nav="contact">Contact<span class="squiggle"></span></a>
 
         <div class="nav-menu-actions">
-          <div class="nav-icon-group-m">
-            <button class="icon-btn" aria-label="Search"><i class="bi bi-search"></i></button>
-            <button class="icon-btn" aria-label="Cart"><i class="bi bi-bag"></i><span class="cart-badge"></span></button>
-          </div>
           <a href="#contact" class="btn-pink" data-nav="contact">Order Now <i class="bi bi-arrow-right"></i></a>
         </div>
       </nav>
 
       <div class="header-actions">
-        <button class="icon-btn" aria-label="Search"><i class="bi bi-search"></i></button>
-        <button class="icon-btn" aria-label="Cart">
-          <i class="bi bi-bag"></i>
-          <span class="cart-badge"></span>
-        </button>
         <a href="#contact" class="btn-pink" data-nav="contact">Order Now <i class="bi bi-arrow-right"></i></a>
         <button class="burger" id="burgerBtn" aria-label="Menu">☰</button>
       </div>
@@ -495,14 +486,23 @@
         <div class="newsletter-content">
           <h2 class="newsletter-title">Stay Sweet with Scoopery!</h2>
           <p class="newsletter-desc">Get updates on new flavors, special offers &amp; sweet surprises.</p>
-          <form class="newsletter-form" action="#" method="post" id="newsForm">
+          <form class="newsletter-form" action="/" method="POST" name="newsletter" id="newsForm" data-netlify="true" data-netlify-honeypot="bot-field">
             <label class="visually-hidden" for="newsEmail">Email address</label>
+            <input type="hidden" name="form-name" value="newsletter">
+            <input type="text" name="bot-field" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="newsletter-field">
               <i class="bi bi-envelope newsletter-field-icon" aria-hidden="true"></i>
               <input type="email" id="newsEmail" name="email" placeholder="Enter your email" required autocomplete="email">
               <button type="submit" class="newsletter-btn" id="newsBtn">Subscribe</button>
             </div>
           </form>
+          <div class="contact-line">
+            <i class="bi bi-telephone-fill contact-line-phone" aria-hidden="true"></i>
+            <a href="https://wa.me/923096717017?text=Assalam-o-Alaikum!%20I%20want%20to%20order%20ice%20cream%20%F0%9F%8D%90" class="contact-line-link" target="_blank" rel="noopener" aria-label="Chat on WhatsApp at +92 309 6717017">
+              <span class="contact-line-number">+92 309 6717017</span>
+              <span class="contact-line-wa"><i class="bi bi-whatsapp" aria-hidden="true"></i></span>
+            </a>
+          </div>
           <small class="news-note" id="newsNote" hidden>Thanks! You're on the sweet list. 🍦</small>
         </div>
         <div class="newsletter-visual" aria-hidden="true">

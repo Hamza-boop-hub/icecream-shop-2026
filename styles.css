@@ -155,19 +155,6 @@ section{scroll-margin-top:var(--nav-h)}
 
 .header-actions{display:flex;align-items:center;gap:10.4px}
 .nav-menu-actions{display:none}
-.icon-btn{
-  position:relative;width:44px;height:44px;border-radius:14px;
-  background:rgba(255,255,255,.92);border:1.5px solid rgba(240,112,140,.18);
-  display:grid;place-items:center;color:var(--brown);font-size:17.28px;
-  box-shadow:0 4px 14px rgba(74,48,44,.07);transition:.25s;
-}
-.icon-btn:hover{transform:translateY(-2px);border-color:rgba(240,112,140,.35);box-shadow:0 8px 20px rgba(240,112,140,.18);color:var(--pink-2)}
-.scrolled .icon-btn{width:38px;height:38px;border-radius:12px}
-.cart-badge{
-  position:absolute;top:7px;right:7px;width:9px;height:9px;
-  background:linear-gradient(135deg,var(--pink-2),#FF8FA8);
-  border-radius:50%;border:2px solid #fff;box-shadow:0 2px 6px rgba(240,112,140,.45);
-}
 .btn-pink{
   display:block;text-align:center;
   gap:7.2px;
@@ -930,6 +917,18 @@ section{scroll-margin-top:var(--nav-h)}
 }
 .newsletter-btn:hover{background:#3D2724;transform:translateY(-1px);box-shadow:0 10px 22px rgba(74,48,44,.22)}
 .news-note{display:block;margin-top:12px;color:var(--teal);font-weight:700}
+.contact-line{display:flex;align-items:center;gap:.55rem;margin-top:14px;width:fit-content}
+.contact-line-phone{color:var(--pink-2);font-size:1.05rem}
+.contact-line-link{display:flex;align-items:center;gap:.55rem;text-decoration:none}
+.contact-line-number{font-family:var(--font-heading);font-weight:800;font-size:1rem;color:var(--brown);letter-spacing:.01em;transition:color .2s ease}
+.contact-line-wa{
+  width:30px;height:30px;border-radius:50%;flex-shrink:0;
+  display:grid;place-items:center;background:#25D366;color:var(--white);
+  font-size:1rem;
+  box-shadow:0 4px 12px rgba(37,211,102,.35);transition:transform .25s ease,box-shadow .25s ease;
+}
+.contact-line-link:hover .contact-line-wa{transform:translateY(-2px);box-shadow:0 8px 18px rgba(37,211,102,.5)}
+.contact-line-link:hover .contact-line-number{color:var(--pink-2)}
 .newsletter-visual{
   position:relative;display:flex;justify-content:center;align-items:flex-end;
   min-height:clamp(180px,24vw,260px);isolation:isolate;
@@ -1057,9 +1056,8 @@ section{scroll-margin-top:var(--nav-h)}
   .nav-link{padding:10.4px 16px;border-radius:12px}
   .nav .squiggle{display:none!important}
   .nav-link+.nav-link{margin-top:2px}
-  .header-actions>.icon-btn,.header-actions>.btn-pink{display:none}
+  .header-actions>.btn-pink{display:none}
   .nav-menu-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;width:100%;margin-top:26px;padding-bottom:8px}
-  .nav-icon-group-m{display:flex;align-items:center;gap:8.8px}
   .burger{display:flex;align-items:center;justify-content:center;width:54px;height:38px;padding:4px 12px;border:0;border-radius:6px;background:transparent;color:rgba(0,0,0,.65);font-size:30px;line-height:1}
   .btn-pink{width:100%;min-height:44px;margin-top:4px;justify-content:center}
 
@@ -1113,6 +1111,7 @@ section{scroll-margin-top:var(--nav-h)}
   .newsletter-grid{grid-template-columns:1fr;text-align:center}
   .newsletter-title,.newsletter-desc{max-width:none;margin-left:auto;margin-right:auto}
   .newsletter-form{margin:0 auto}
+  .contact-line{margin:14px auto 0}
   .newsletter-visual{min-height:230px;order:-1}
   .newsletter-img--main{width:min(53%,230px);transform:translateY(-2%)}
   .newsletter-img--side{bottom:8%;width:min(32%,135px)}
